@@ -16,8 +16,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/aanzal/ThePro",
-    "repository": "https://github.com/aanzal/ThePro",
+    "website": "https://github.com/aanzal/Millie",
+    "repository": "https://github.com/aanzal/Millie",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
