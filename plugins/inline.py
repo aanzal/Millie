@@ -92,6 +92,9 @@ def get_reply_markup(query):
     buttons = [
         [
             InlineKeyboardButton('Developers', url="https://t.me/CinemaGround")
+        ],
+        [
+            InlineKeyboardButton('Search 🔍', switch_inline_query_current_chat=query)
         ]
         ]
     return InlineKeyboardMarkup(buttons)
