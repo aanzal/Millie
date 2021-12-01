@@ -36,7 +36,7 @@ async def addconnection(client,message):
     except Exception as e:
         print(e)
         await message.reply_text(
-            "<b>Error</b>\n\n× Maybe the ID you have given is Wrong!\n**<i>OR</i>**\n× Check i'm in this group. If not, Add me by Clicking <a href='http://t.me/XaynBot?startgroup=true'>Here</a> & Make me admin!",
+            "<b>Error</b>\n\n× Maybe the ID you have given is Wrong!\n**<i>OR</i>**\n× Check i'm in this group. If not, Add me by Clicking <a href='http://t.me/CGproBot?startgroup=true'>Here</a> & Make me admin!",
             quote=True,
         )
 
@@ -50,7 +50,7 @@ async def addconnection(client,message):
             addcon = await add_connection(str(group_id), str(userid))
             if addcon:
                 await message.reply_text(
-                    f"Successfully Connected to **{title}**",
+                    f"Successfully Connected to **{title}**\n\n❣️ From <a href='http://t.me/MillieUpdates'>𝗠𝗶𝗹𝗹𝗶𝗲</a>",
                     quote=True,
                     parse_mode="md"
                 )
@@ -77,11 +77,11 @@ async def addconnection(client,message):
 async def deleteconnection(client,message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"You are ANONYMOUS ADMIN. Use /connect {message.chat.id} in PM")
+        return await message.reply(f"You are ANONYMOUS ADMIN. Use /connectit {message.chat.id} in PM")
     chat_type = message.chat.type
 
     if chat_type == "private":
-        await message.reply_text("Run /connections to VIEW or DISCONNECT from groups!", quote=True)
+        await message.reply_text("Run /myconnections to VIEW or DISCONNECT from groups!", quote=True)
 
     elif chat_type in ["group", "supergroup"]:
         group_id = message.chat.id
@@ -98,7 +98,7 @@ async def deleteconnection(client,message):
         if delcon:
             await message.reply_text("Successfully DISCONNECTED from this chat", quote=True)
         else:
-            await message.reply_text("This chat isn't CONNECTED to me!\nDo /connect to CONNECT.", quote=True)
+            await message.reply_text("This chat isn't CONNECTED to me!\nDo /connectit to CONNECT.", quote=True)
 
 
 @Client.on_message(filters.private & filters.command(["myconnections"]))
@@ -130,7 +130,7 @@ async def connections(client,message):
             pass
     if buttons:
         await message.reply_text(
-            "Your connected group details :\n\n",
+            "**Your Connected Group Details :\n\n**",
             reply_markup=InlineKeyboardMarkup(buttons),
             quote=True
         )
