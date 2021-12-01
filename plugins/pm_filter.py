@@ -374,7 +374,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     file_id=file_id,
                     caption=f_caption
                     )
-                await query.answer('Check PM. I have Send you Files Privately. ( Just go to @XaynBot )',show_alert = True)
+                await query.answer('Check PM. I have Send you Files Privately. ( Just go to @CGProBot )',show_alert = True)
         except UserIsBlocked:
             await query.answer('IF YOU NEEDED FILES, THEN WHY YOU BLOCKED ME ! UNBLOCK ME !!!',show_alert = True)
         except PeerIdInvalid:
@@ -384,7 +384,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("ആ കളി എന്റെ അടുത്ത് നടക്കും എന്ന് തോന്നുന്നുണ്ടോ ??. YOU THINK I AM LIKE THAT FOOL 🙂??",show_alert=True)
+            await query.answer("ആ കളി എന്റെ അടുത്ത് നടക്കും എന്ന് തോന്നുന്നുണ്ടോ ?? YOU THINK I AM LIKE THAT FOOL 🙂??",show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
