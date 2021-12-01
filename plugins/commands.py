@@ -17,7 +17,7 @@ async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
             [
-                InlineKeyboardButton('Help', url='http://t.me/xaynbot?start=help')
+                InlineKeyboardButton('Help', url='http://t.me/CGProBot?start=help')
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -33,10 +33,10 @@ async def start(client, message):
     if len(message.command) != 2:
         buttons = [
             [
-            InlineKeyboardButton('➕ Add Me To Your Group ➕', url='http://t.me/XaynBot?startgroup=true')
+            InlineKeyboardButton('➕ Add Me To Your Group ➕', url='http://t.me/CGProBot?startgroup=true')
             ],
             [
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/XaynUpdates'),
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/MillieUpdates'),
             InlineKeyboardButton('👣 Help', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -73,10 +73,10 @@ async def start(client, message):
     if len(message.command) ==2 and message.command[1] in ["subscribe", "error", "okay"]:
         buttons = [
             [
-            InlineKeyboardButton('➕ Add Me To Your Group ➕', url='http://t.me/XaynBot?startgroup=true')
+            InlineKeyboardButton('➕ Add Me To Your Group ➕', url='http://t.me/CGProBot?startgroup=true')
             ],
             [
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/XaynUpdates'),
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/MillieUpdates'),
             InlineKeyboardButton('👣 Help', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -90,7 +90,7 @@ async def start(client, message):
     file_id = message.command[1]
     files_ = await get_file_details(file_id)
     if not files_:
-        return await message.reply('**Try Asking your Movie at <a href=https://t.me/CinemaGround>Cinema Ground</a>\nI will filter your Movies there!\n\n<a href=https://t.me/XaynUpdates>𝗭𝗔𝗬𝗡 𝗨𝗣𝗗𝗔𝗧𝗘𝗦</a>**')
+        return await message.reply('**Try Asking your Movie at <a href=https://t.me/CinemaGround>Cinema Ground</a>\nI will filter your Movies there!\n\nFrom <a href=https://t.me/MillieUpdates>𝗠𝗶𝗹𝗹𝗶𝗲</a>**')
     files = files_[0]
     title = files.file_name
     size=get_size(files.file_size)
@@ -154,7 +154,7 @@ async def delete(bot, message):
     """Delete file from database"""
     reply = message.reply_to_message
     if reply and reply.media:
-        msg = await message.reply("Processing...⏳", quote=True)
+        msg = await message.reply("Processing...", quote=True)
     else:
         await message.reply('Reply to file with /delete which you want to delete', quote=True)
         return
@@ -173,9 +173,9 @@ async def delete(bot, message):
         'mime_type': media.mime_type
     })
     if result.deleted_count:
-        await msg.edit('File is successfully deleted from database')
+        await msg.edit('File successfully deleted from Database')
     else:
-        await msg.edit('File not found in database')
+        await msg.edit('File not found in Database')
 
 
 @Client.on_message(filters.command('deleteallindexed') & filters.user(ADMINS))
