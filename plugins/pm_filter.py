@@ -184,7 +184,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     return
             else:
                 await query.message.edit_text(
-                    "I'm not connected to any groups!\nCheck /connections or connect to any groups",
+                    "I'm not connected to any groups!\nCheck /myconnections or connect to any groups",
                     quote=True
                 )
                 return
@@ -266,7 +266,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 parse_mode="md"
             )
         else:
-            await query.message.edit_text('Some error occured!!', parse_mode="md")
+            await query.message.edit_text('Some error occured!', parse_mode="md")
         return
     elif "disconnect" in query.data:
         await query.answer()
@@ -282,7 +282,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 parse_mode="md"
             )
         else:
-            await query.message.edit_text('Some error occured!!', parse_mode="md")
+            await query.message.edit_text('Some error occured!', parse_mode="md")
         return
     elif "deletecb" in query.data:
         await query.answer()
@@ -297,7 +297,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 "Successfully deleted connection"
             )
         else:
-            await query.message.edit_text('Some error occured!!', parse_mode="md")
+            await query.message.edit_text('Some error occured!', parse_mode="md")
         return
     elif query.data == "backcb":
         await query.answer()
@@ -307,7 +307,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         groupids = await all_connections(str(userid))
         if groupids is None:
             await query.message.edit_text(
-                "There are no active connections!! Connect to some groups first.",
+                "There are no active Connections!! Connect to some groups first.",
             )
             return
         buttons = []
@@ -316,7 +316,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ttl = await client.get_chat(int(groupid))
                 title = ttl.title
                 active = await if_active(str(userid), str(groupid))
-                act = " - ACTIVE" if active else ""
+                act = " - Active" if active else ""
                 buttons.append(
                     [
                         InlineKeyboardButton(
@@ -328,7 +328,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 pass
         if buttons:
             await query.message.edit_text(
-                "Your connected group details ;\n\n",
+                "Your connected group details :\n\n",
                 reply_markup=InlineKeyboardMarkup(buttons)
             )
 
@@ -414,10 +414,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "start":
         buttons = [
             [
-            InlineKeyboardButton('➕ Add Me To Your Group ➕', url='http://t.me/XaynBot?startgroup=true')
+            InlineKeyboardButton('➕ Add Me To Your Group ➕', url='http://t.me/CGProBot?startgroup=true')
             ],
             [
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/XaynUpdates'),
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/MillieUpdates'),
             InlineKeyboardButton('👣 Help', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -440,7 +440,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('Status', callback_data='mystatus'),
             InlineKeyboardButton('Back', callback_data='start')
             ],[
-            InlineKeyboardButton('Close 🗑', callback_data='close_data'), 
+            InlineKeyboardButton('Brother', url='https://t.me/XaynBot'),
+            InlineKeyboardButton('Close', callback_data='close_data'),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -701,7 +702,7 @@ async def advantage_spell_chok(msg):
                 )
             ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply('× Check that the name of the Movie | Series you have Given is Correct or not!\n× Otherwise I might not have this movie\n× Check if any of the following is Correct!\n\n× നിങ്ങൾ തന്നിരിക്കുന്ന സിനിമയുടെ പേര് ശെരിയാണോ എന്ന് ചെക്ക് ചെയ്യുക.\n× അത് അല്ലെങ്കിൽ ഈ സിനിമ എന്റെ അടുത്ത് കാണില്ല.\n× താഴെ തന്നിരിക്കുന്നതിൽ എന്തെങ്കിലും ആണോ എന്ന് നോക്കു.\n\n<b>From <a href=https://t.me/XaynUpdates>Zayn</a></b>', reply_markup=InlineKeyboardMarkup(btn))
+    await msg.reply('○ Check that the name of the Movie | Series you have Given is Correct or not!\n○ Otherwise I might not have this File.\n○ Check if any of the following is Correct!\n\n❣️ From <a href=https://t.me/MillieUpdates>𝗠𝗶𝗹𝗹𝗶𝗲</a>', reply_markup=InlineKeyboardMarkup(btn))
     
 
 
