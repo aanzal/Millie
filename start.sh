@@ -4,9 +4,9 @@ then
   git clone https://github.com/aanzal/Millie.git /Millie
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /ThePro
+  git clone $UPSTREAM_REPO /Millie
 fi
-cd /ThePro
+cd /Millie
 pip3 install -U -r requirements.txt
 echo "Starting Bot...."
 python3 bot.py
