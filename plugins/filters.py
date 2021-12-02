@@ -110,7 +110,7 @@ async def addfilter(client, message):
     await add_filter(grp_id, text, reply_text, btn, fileid, alert)
 
     await message.reply_text(
-        f"Filter for  `{text}`  added in  **{title}**",
+        f"Saved a Filter in **{title}**\nFilter : `{text}`",
         quote=True,
         parse_mode="md"
     )
@@ -172,7 +172,7 @@ async def get_all(client, message):
                 )
             return
     else:
-        filterlist = f"There are no Active Filters in **{title}**"
+        filterlist = f"Active filters in **{title}**\nFilters : 0"
 
     await message.reply_text(
         text=filterlist,
@@ -220,7 +220,7 @@ async def deletefilter(client, message):
     except:
         await message.reply_text(
             "<i>Mention the filtername which you wanna delete!</i>\n\n"
-            "<code>/delit filtername</code>\n\n"
+            "<code>/delf filtername</code>\n\n"
             "Use /viewfilters to view all available filters",
             quote=True
         )
