@@ -17,7 +17,7 @@ from info import ADMINS
 async def addfilter(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"You are ANONYMOUS admin. Use /connect {message.chat.id} in PM")
+        return await message.reply(f"You are ANONYMOUS admin. Use /connectit {message.chat.id} in PM")
     chat_type = message.chat.type
     args = message.text.html.split(None, 1)
 
@@ -29,7 +29,7 @@ async def addfilter(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("Make sure I'm present in your group!!", quote=True)
+                await message.reply_text("Make sure I'm present in your group!", quote=True)
                 return
         else:
             await message.reply_text("I'm not connected to any groups!", quote=True)
@@ -122,7 +122,7 @@ async def get_all(client, message):
     chat_type = message.chat.type
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"You are ANONYMOUS admin. Use /connect {message.chat.id} in PM")
+        return await message.reply(f"You are ANONYMOUS admin. Use /connectit {message.chat.id} in PM")
     if chat_type == "private":
         userid = message.from_user.id
         grpid = await active_connection(str(userid))
@@ -132,7 +132,7 @@ async def get_all(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("Make sure I'm present in your group!!", quote=True)
+                await message.reply_text("Make sure I'm present in your group!", quote=True)
                 return
         else:
             await message.reply_text("I'm not connected to any groups!", quote=True)
@@ -156,7 +156,7 @@ async def get_all(client, message):
     texts = await get_filters(grp_id)
     count = await count_filters(grp_id)
     if count:
-        filterlist = f"Total number of filters in **{title}** : {count}\n\n"
+        filterlist = f"Total number of Filters in **{title}** : {count}\n\n"
 
         for text in texts:
             keywords = " ×  `{}`\n".format(text)
@@ -172,7 +172,7 @@ async def get_all(client, message):
                 )
             return
     else:
-        filterlist = f"There are no active filters in **{title}**"
+        filterlist = f"There are no Active Filters in **{title}**"
 
     await message.reply_text(
         text=filterlist,
@@ -184,7 +184,7 @@ async def get_all(client, message):
 async def deletefilter(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"You are ANONYMOUS admin. Use /connect {message.chat.id} in PM")
+        return await message.reply(f"You are ANONYMOUS admin. Use /connectit {message.chat.id} in PM")
     chat_type = message.chat.type
 
     if chat_type == "private":
@@ -195,7 +195,7 @@ async def deletefilter(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("Make sure I'm present in your group!!", quote=True)
+                await message.reply_text("Make sure I'm present in your group!", quote=True)
                 return
         else:
             await message.reply_text("I'm not connected to any groups!", quote=True)
@@ -220,7 +220,7 @@ async def deletefilter(client, message):
     except:
         await message.reply_text(
             "<i>Mention the filtername which you wanna delete!</i>\n\n"
-            "<code>/del filtername</code>\n\n"
+            "<code>/delit filtername</code>\n\n"
             "Use /viewfilters to view all available filters",
             quote=True
         )
@@ -235,7 +235,7 @@ async def deletefilter(client, message):
 async def delallconfirm(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"You are ANONYMOUS admin. Use /connect {message.chat.id} in PM")
+        return await message.reply(f"You are ANONYMOUS admin. Use /connectit {message.chat.id} in PM")
     chat_type = message.chat.type
 
     if chat_type == "private":
@@ -246,7 +246,7 @@ async def delallconfirm(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("Make sure I'm present in your group!!", quote=True)
+                await message.reply_text("Make sure I'm present in your group!", quote=True)
                 return
         else:
             await message.reply_text("I'm not connected to any groups!", quote=True)
@@ -262,7 +262,7 @@ async def delallconfirm(client, message):
     st = await client.get_chat_member(grp_id, userid)
     if (st.status == "creator") or (str(userid) in ADMINS):
         await message.reply_text(
-            f"This will delete all filters from '{title}'.\nDo you want to continue?",
+            f"This will delete All Filters from '{title}'.\nDo you want to continue?",
             reply_markup=InlineKeyboardMarkup([
                 [InlineKeyboardButton(text="YES",callback_data="delallconfirm")],
                 [InlineKeyboardButton(text="CANCEL",callback_data="delallcancel")]
