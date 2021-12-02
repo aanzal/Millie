@@ -76,17 +76,17 @@
         },
         "CUSTOM_FILE_CAPTION": {
             "description": "A custom file caption for your files. formatable with , file_name, file_caption, file_size, Read Readme.md for better understanding.",
-            "value": "**<code>{file_name}</code>\n\nSize : <code>{file_size}</code>\n\n© Powered by <a href='https://t.me/MillieUpdates'>Millie</a>**",
+            "value": "<code>{file_name}</code>\n\nSize : <code>{file_size}</code>\n\n© Powered by <a href='https://t.me/ZaynAndMillie'>Millie</a>**",
             "required": false
         },
         "DATABASE_URI": {
             "description": "mongoDB URI. Get this value from https://www.mongodb.com.",
-            "value": "mongodb+srv://zayn:zayn@cluster0.vtim2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+            "value": "mongodb+srv://AK:AK@cluster0.fuadq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
             "required": true
         },
         "DATABASE_NAME": {
-            "description": "Name of the database in mongoDB. For more help watch this video - https://youtu.be/dsuTn4qV2GA",
-            "value": "Zayn_Files",
+            "description": "Name of the database in mongoDB.",
+            "value": "LuciferMoringstar_Robot",
             "required": false
         },
         "COLLECTION_NAME": {
