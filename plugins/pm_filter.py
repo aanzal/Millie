@@ -73,14 +73,14 @@ async def next_page(bot, query):
 
     ident, req, key, offset = query.data.split("_")
     if int(req) not in [query.from_user.id, 0]:
-        return await query.answer("ജോലി ഒന്നും ആയില്യോ മോനെ ?", show_alert=True)
+        return await query.answer("ജോലി ഒന്നും ആയില്യോ മോനെ?", show_alert=True)
     try:
         offset = int(offset)
     except:
         offset = 0
     search = BUTTONS.get(key)
     if not search:
-        await query.answer("ശെരിയന്ന 🙂.",show_alert=True)
+        await query.answer("It's Not for you! If you need some Movies / Series, then Try Asking Again!!.",show_alert=True)
         return
 
     files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
@@ -147,7 +147,7 @@ async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     movies = SPELL_CHECK.get(query.message.reply_to_message.message_id)
     if not movies:
-        return await query.answer("ശെരിയന്ന 🙂.", show_alert=True)
+        return await query.answer("Okayy!", show_alert=True)
     movie = movies[(int(movie_))]
     if int(user) != 0 and query.from_user.id != int(user):
         return await query.answer("ജോലി ഒന്നും ആയില്യോ മോനെ ?", show_alert=True)
@@ -347,7 +347,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
         if not files_:
-            return await query.answer('No such file exist.')
+            return await query.answer('No Such File Exist. Try Asking Again!')
         files = files_[0]
         title = files.file_name
         size=get_size(files.file_size)
@@ -384,7 +384,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("ആ കളി എന്റെ അടുത്ത് നടക്കും എന്ന് തോന്നുന്നുണ്ടോ ?? YOU THINK I AM LIKE THAT FOOL 🙂??",show_alert=True)
+            await query.answer("You think I am a Fool ?! Just do what you have to do!\n\nസബ്സ്ക്രൈബ് ചെയ്താൽ വേണെങ്കിൽ ഫയൽ തരാം, ഇല്ലെങ്കിൽ കിട്ടില്ല. നോക്കി നിക്കലേ ഉണ്ടാവു !",show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
@@ -417,7 +417,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('➕ Add Me To Your Group ➕', url='http://t.me/CGProBot?startgroup=true')
             ],
             [
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/MillieUpdates'),
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/ZaynAndMillie'),
             InlineKeyboardButton('👣 Help', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -438,9 +438,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton('About', callback_data='about'),
             InlineKeyboardButton('Status', callback_data='mystatus'),
-            InlineKeyboardButton('Back', callback_data='start')
+            InlineKeyboardButton('Brother', url='https://t.me/XaynBot')
             ],[
-            InlineKeyboardButton('Brother', url='https://t.me/XaynBot'),
+            InlineKeyboardButton('Back', callback_data='start'),
             InlineKeyboardButton('Close', callback_data='close_data'),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -548,7 +548,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "rfrsh":
-        await query.answer("Stimulating Data")
+        await query.answer("Stimulating Data.")
         buttons = [[
             InlineKeyboardButton('Back', callback_data='help'),
             InlineKeyboardButton('Refresh', callback_data='rfrsh')
@@ -702,7 +702,7 @@ async def advantage_spell_chok(msg):
                 )
             ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply('○ Check that the name of the Movie | Series you have Given is Correct or not!\n○ Otherwise I might not have this File.\n○ Check if any of the following is Correct!\n\n❣️ From <a href=https://t.me/MillieUpdates>𝗠𝗶𝗹𝗹𝗶𝗲</a>', reply_markup=InlineKeyboardMarkup(btn))
+    await msg.reply('○ Check that the name of the Movie | Series you have Given is Correct or not!\n○ Otherwise I might not have this File.\n○ Check if any of the following is Correct!\n\n❣️ From <a href=https://t.me/ZaynAndMillie>𝗠𝗶𝗹𝗹𝗶𝗲</a>', reply_markup=InlineKeyboardMarkup(btn))
     
 
 
