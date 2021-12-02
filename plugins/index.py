@@ -29,7 +29,7 @@ async def index_files(bot, query):
         return await query.answer('Wait until previous Process Complete.', show_alert=True)
     msg = query.message
 
-    await query.answer('Processing...⏳', show_alert=True)
+    await query.answer('Starting...', show_alert=True)
     if int(from_user) not in ADMINS:
         await bot.send_message(int(from_user),
                                f'Thank You for Your Submission.\nChannel : {chat}\n\n❣️ From 𝗠𝗶𝗹𝗹𝗶𝗲',
@@ -66,7 +66,7 @@ async def send_for_index(bot, message):
     try:
         await bot.get_chat(chat_id)
     except ChannelInvalid:
-        return await message.reply('This may be a private channel / group. Make me an admin over there to index the files.')
+        return await message.reply('This may be a private Channel / Group. Make me an admin over there to index the files.')
     except (UsernameInvalid, UsernameNotModified):
         return await message.reply('Invalid Link.')
     except Exception as e:
