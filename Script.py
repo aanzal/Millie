@@ -12,8 +12,8 @@ Tap <code>Help</code> If you have any Doubt about how to use me in your Groups!<
 
 That's it! <b>Bot is now Ready!</b>
 
-<a href='http://t.me/MillieUpdates'>𝗠𝗶𝗹𝗹𝗶𝗲</a>"""
-    ABOUT_TXT = """🤖 𝐁𝐎𝐓 : <a href=https://t.me/XaynUpdates>𝗭𝗔𝗬𝗡</a>
+<a href='http://t.me/ZaynAndMillie'>𝗠𝗶𝗹𝗹𝗶𝗲</a>"""
+    ABOUT_TXT = """🤖 𝐁𝐎𝐓 : <a href=https://t.me/ZaynAndMillie>𝗠𝗜𝗟𝗟𝗜𝗘</a>
 
 👨‍💻 𝐂𝐑𝐄𝐀𝐓𝐎𝐑 : <a href=https://t.me/axnzal>𝗛𝗨𝗠𝗔𝗡</a>
 
@@ -25,22 +25,22 @@ That's it! <b>Bot is now Ready!</b>
 
 📂 𝐃𝐀𝐓𝐀𝐁𝐀𝐒𝐄 : <a href=https://www.mongodb.com/>𝗠𝗢𝗡𝗚𝗢 𝗗𝗕</a>
 
-👣 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 : <a href=https://t.me/MillieUpdates>𝗠𝗜𝗟𝗟𝗜𝗘 𝗨𝗣𝗗𝗔𝗧𝗘𝗦</a>
+👣 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 : <a href=https://t.me/ZaynAndMillie>𝗠𝗜𝗟𝗟𝗜𝗘 𝗨𝗣𝗗𝗔𝗧𝗘𝗦</a>
 
 👤 𝐁𝐑𝐎𝐓𝐇𝐄𝐑 : <a href=https://t.me/XaynBot>𝗭𝗔𝗬𝗡</a>"""
     SOURCE_TXT = """𝐇𝐄𝐋𝐏 : <b>Source Code</b>
 
-- Zayn Bot is a Private Source Project.
+- Millie Bot is a Private Source Project.
 
-<a href='http://t.me/MillieUpdates'>𝗠𝗶𝗹𝗹𝗶𝗲</a>"""
+<a href='http://t.me/ZaynAndMillie'>𝗠𝗶𝗹𝗹𝗶𝗲</a>"""
     MANUELFILTER_TXT = """𝐇𝐄𝐋𝐏 : <b>Filters</b>
 
-- Filter is the feature were users can set automated Replies for a particular keyword and Zayn will respond whenever a keyword is found in the message.
+- Filter is the feature were users can set automated Replies for a particular keyword and Millie will respond whenever a keyword is found in the message.
 
 
 𝐍𝐎𝐓𝐄 :
 
-○ <b>Zayn Bot</b> should have Admin.
+○ <b>Millie Bot</b> should have Admin.
 ○ Only <b>Admins</b> can Add filters in the Connected chat.
 ○ Alert buttons have a limit of <b>64 characters.</b>
 
@@ -52,15 +52,15 @@ That's it! <b>Bot is now Ready!</b>
 ○ /delf - <code>Deletes a Specific Filter in the Connected Chat.</code>
 ○ /delallf - <code>Deletes the whole Filters in the Connected Chat ( For Chat Owner Only ).</code>
 
-<a href='http://t.me/MillieUpdates'>𝗠𝗶𝗹𝗹𝗶𝗲</a>"""
+<a href='http://t.me/ZaynAndMillie'>𝗠𝗶𝗹𝗹𝗶𝗲</a>"""
     BUTTON_TXT = """𝐇𝐄𝐋𝐏 : <b>Buttons</b>
 
-- Zayn Supports Both URL and ALERT Inline Buttons.
+- Millie Supports Both URL and ALERT Inline Buttons.
 
 
 𝐍𝐎𝐓𝐄 :
 
-○ <b>Zayn Bot</b> supports buttons with any telegram media type.
+○ <b>Millie</b> supports buttons with any telegram media type.
 ○ Telegram will not Allows you to send Buttons Without any <b>Content</b>, So Content is Mandatory.
 ○ Buttons should be properly parsed as <b>Markdown format.</b>
 
@@ -68,19 +68,19 @@ That's it! <b>Bot is now Ready!</b>
 𝐁𝐔𝐓𝐓𝐎𝐍𝐒 𝐔𝐒𝐀𝐆𝐄 :
 
 ○ <b>URL Buttons :</b>
-<code>[Button Text](buttonurl:https://t.me/XaynBot)</code>
+<code>[Button Text](buttonurl:https://t.me/CGProBot)</code>
 
 ○ <b>Alert Buttons :</b>
 <code>[Button Text](buttonalert:This is an Alert message)</code>
 
-<a href='http://t.me/MillieUpdates'>𝗠𝗶𝗹𝗹𝗶𝗲</a>"""
+<a href='http://t.me/ZaynAndMillie'>𝗠𝗶𝗹𝗹𝗶𝗲</a>"""
     AUTOFILTER_TXT = """𝐇𝐄𝐋𝐏 : <b>Auto Filter</b>
 
 ○ Make me the <b>Admin</b> of your channel if it's private.
 ○ Make sure that your Channel does not contains <b>Camrips, Porn or Fake </b>files.
-○ <b>Forward</b> the last message to me with quotes. I'll Add all the files in that channel to my <b>Data Base.</b>
+○ <b>Forward</b> the last message to me with quotes. I'll Add all the files in that channel to my <b>DataBase.</b>
 
-<a href='http://t.me/MillieUpdates'>𝗠𝗶𝗹𝗹𝗶𝗲</a>"""
+<a href='http://t.me/ZaynAndMillie'>𝗠𝗶𝗹𝗹𝗶𝗲</a>"""
     CONNECTION_TXT = """<b>𝐇𝐄𝐋𝐏 : <b>Connections</b>
 
 - Used to connect Bot to PM for managing filters.
@@ -99,10 +99,10 @@ That's it! <b>Bot is now Ready!</b>
 ○ /disconnectit  - <code>Disconnect from a Particular Chat.</code>
 ○ /myconnections - <code>List of all your Connections.</code></b>
 
-<a href='http://t.me/MillieUpdates'>𝗠𝗶𝗹𝗹𝗶𝗲</a>"""
+<a href='http://t.me/ZaynAndMillie'>𝗠𝗶𝗹𝗹𝗶𝗲</a>"""
     EXTRAMOD_TXT = """𝐇𝐄𝐋𝐏 : <b>Extra Modules</b>
 
-- These are the Extra Features of Zayn
+- These are the Extra Features of Millie
 
 
 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒 𝐀𝐍𝐃 𝐔𝐒𝐀𝐆𝐄 :
@@ -111,7 +111,7 @@ That's it! <b>Bot is now Ready!</b>
 ○ /info  - <code>Gets Information About a Specifed User.</code>
 ○ /imdb | /search - <code>Get the Movie Information From Various Sources.</code>
 
-<a href='http://t.me/MillieUpdates'>𝗠𝗶𝗹𝗹𝗶𝗲</a>
+<a href='http://t.me/ZaynAndMillie'>𝗠𝗶𝗹𝗹𝗶𝗲</a>
 """
     ADMIN_TXT = """<b>Oh Yeah, Wait for It!</b>"""
     STATUS_TXT = """» 𝗧𝗢𝗧𝗔𝗟 𝗙𝗜𝗟𝗘𝗦 : <code>{}</code>
@@ -120,17 +120,17 @@ That's it! <b>Bot is now Ready!</b>
 » 𝗨𝗦𝗘𝗗 𝗦𝗧𝗢𝗥𝗔𝗚𝗘 : <code>{}</code>
 » 𝗙𝗥𝗘𝗘 𝗦𝗧𝗢𝗥𝗔𝗚𝗘 : <code>{}</code>
 
-<a href='http://t.me/MillieUpdates'>𝗠𝗶𝗹𝗹𝗶𝗲</a>"""
+<a href='http://t.me/ZaynAndMillie'>𝗠𝗶𝗹𝗹𝗶𝗲</a>"""
     LOG_TEXT_G = """#NewGroup
 Group - {}(<code>{}</code>)
 Total Members - <code>{}</code>
 Added By - {}
 
-<a href='http://t.me/MillieUpdates'>𝗠𝗶𝗹𝗹𝗶𝗲</a>
+<a href='http://t.me/ZaynAndMillie'>𝗠𝗶𝗹𝗹𝗶𝗲</a>
 """
     LOG_TEXT_P = """#NewUser
 ID - <code>{}</code>
 Name - {}
 
-<a href='http://t.me/MillieUpdates'>𝗠𝗶𝗹𝗹𝗶𝗲</a>
+<a href='http://t.me/ZaynAndMillie'>𝗠𝗶𝗹𝗹𝗶𝗲</a>
 """
