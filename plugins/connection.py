@@ -130,7 +130,7 @@ async def connections(client,message):
             pass
     if buttons:
         await message.reply_text(
-            "**Your Connected Group Details :\n\n**",
+            "**Your Connected Group Details :**\n\n",
             reply_markup=InlineKeyboardMarkup(buttons),
             quote=True
         )
