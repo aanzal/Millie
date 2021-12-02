@@ -77,7 +77,7 @@ async def send_for_index(bot, message):
     except:
         return await message.reply('Make Sure That Iam An Admin In The Channel, if channel is private')
     if k.empty:
-        return await message.reply('This may be group and iam not a admin of the group.')
+        return await message.reply('This may be group and I am not a admin of the group.')
 
     if message.from_user.id in ADMINS:
         buttons = [
@@ -98,7 +98,7 @@ async def send_for_index(bot, message):
         try:
             link = (await bot.create_chat_invite_link(chat_id)).invite_link
         except ChatAdminRequired:
-            return await message.reply('Make sure i am an admin in the chat and have permission to invite users.')
+            return await message.reply('Make sure I am an admin in the chat and have permission to invite users.')
     else:
         link = f"@{message.forward_from_chat.username}"
     buttons = [
@@ -115,7 +115,7 @@ async def send_for_index(bot, message):
     await bot.send_message(LOG_CHANNEL,
                            f'#IndexRequest\n\nBy : {message.from_user.mention} (<code>{message.from_user.id}</code>)\nChat ID/ Username - <code> {chat_id}</code>\nLast Message ID - <code>{last_msg_id}</code>\nInviteLink - {link}',
                            reply_markup=reply_markup)
-    await message.reply('ThankYou For the Contribution, Wait to verify the files.')
+    await message.reply('Thank You for Your Submission.')
 
 
 @Client.on_message(filters.command('setskip') & filters.user(ADMINS))
@@ -129,7 +129,7 @@ async def set_skip_number(bot, message):
         await message.reply(f"Succesfully set SKIP number as {skip}")
         temp.CURRENT = int(skip)
     else:
-        await message.reply("Give me a skip number")
+        await message.reply("Give me a skip number.")
 
 
 async def index_files_to_db(lst_msg_id, chat, msg, bot):
@@ -189,4 +189,4 @@ async def index_files_to_db(lst_msg_id, chat, msg, bot):
             logger.exception(e)
             await msg.edit(f'Error: {e}')
         else:
-            await msg.edit(f'Succesfully saved <code>{total_files}</code> to DataBase!\nDuplicate Files Skipped : <code>{duplicate}</code>\nDeleted Messages Skipped : <code>{deleted}</code>\nErrors Occured : <code>{errors}</code>')
+            await msg.edit(f'Succesfully Saved Files : <code>{total_files}</code>\nDuplicate Files Skipped : <code>{duplicate}</code>\nDeleted Messages Skipped : <code>{deleted}</code>\nErrors Occured : <code>{errors}</code>')
