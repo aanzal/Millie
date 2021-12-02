@@ -7,7 +7,7 @@ from info import ADMINS
 async def addconnection(client,message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"You are ANONYMOUS admin. Use /connect {message.chat.id} in PM")
+        return await message.reply(f"You are ANONYMOUS admin. Use /connectit {message.chat.id} in PM")
     chat_type = message.chat.type
 
     if chat_type == "private":
@@ -16,7 +16,7 @@ async def addconnection(client,message):
         except:
             await message.reply_text(
                 "<b>Enter in correct format!</b>\n\n"
-                "<code>/connect groupid</code>\n\n",
+                "<code>/connectit groupid</code>\n\n",
                 quote=True
             )
             return
@@ -50,7 +50,7 @@ async def addconnection(client,message):
             addcon = await add_connection(str(group_id), str(userid))
             if addcon:
                 await message.reply_text(
-                    f"Successfully Connected to **{title}**\n\n❣️ From <a href='http://t.me/MillieUpdates'>𝗠𝗶𝗹𝗹𝗶𝗲</a>",
+                    f"Successfully Connected to **{title}**\n\n❣️ From <a href='http://t.me/ZaynAndMillie'>𝗠𝗶𝗹𝗹𝗶𝗲</a>",
                     quote=True,
                     parse_mode="md"
                 )
@@ -108,7 +108,7 @@ async def connections(client,message):
     groupids = await all_connections(str(userid))
     if groupids is None:
         await message.reply_text(
-            "CONNECT SOME GROUP FIRST!",
+            "<b>Connect Some Group First!</b>",
             quote=True
         )
         return
@@ -118,7 +118,7 @@ async def connections(client,message):
             ttl = await client.get_chat(int(groupid))
             title = ttl.title
             active = await if_active(str(userid), str(groupid))
-            act = " - ACTIVE" if active else ""
+            act = " - Active" if active else ""
             buttons.append(
                 [
                     InlineKeyboardButton(
