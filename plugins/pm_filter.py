@@ -80,7 +80,7 @@ async def next_page(bot, query):
         offset = 0
     search = BUTTONS.get(key)
     if not search:
-        await query.answer("It's Not for you! If you need some Movies / Series, then Try Asking Again!!.",show_alert=True)
+        await query.answer("It's Not for you! If you need some Movies / Series, then Try Asking Again!!",show_alert=True)
         return
 
     files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
@@ -654,7 +654,7 @@ async def auto_filter(client, msg, spoll=False):
             url = imdb['url']
         )
     else:
-        cap = "Results for your Query {search}"
+        cap = "Results Found!"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
