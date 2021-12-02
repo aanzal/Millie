@@ -37,11 +37,11 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('BOT UPDATES', url='https://t.me/MillieUpdates')
+            InlineKeyboardButton('My Updates', url='https://t.me/ZaynAndMillie')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
-            text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\n<a href='https://t.me/MillieUpdates'>Bot Updates</a></b>",
+            text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\n<a href='https://t.me/ZaynAndMillie'>My Updates</a></b>",
             reply_markup=reply_markup)
     else:
         for u in message.new_chat_members:
@@ -50,7 +50,7 @@ async def save_group(bot, message):
                     await (temp.MELCOW['welcome']).delete()
                 except:
                     pass
-            temp.MELCOW['welcome'] = await message.reply(f"<b>Hey {u.mention}, Welcome to {message.chat.title}\n\n<a href='https://t.me/MillieUpdates'>Bot Updates</a></b>")
+            temp.MELCOW['welcome'] = await message.reply(f"<b>Hey {u.mention}, Welcome to {message.chat.title}\n\n<a href='https://t.me/ZaynAndMillie'>My Updates</a></b>")
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
@@ -96,7 +96,7 @@ async def disable_chat(bot, message):
     if not cha_t:
         return await message.reply("Chat Not Found.")
     if cha_t['is_disabled']:
-        return await message.reply(f"This chat is already disabled:\nReason-<code> {cha_t['reason']} </code>")
+        return await message.reply(f"This chat is already disabled :\nReason-<code> {cha_t['reason']} </code>")
     await db.disable_chat(int(chat_), reason)
     temp.BANNED_CHATS.append(int(chat_))
     await message.reply('Chat Succesfully Disabled')
