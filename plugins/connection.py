@@ -57,12 +57,12 @@ async def addconnection(client,message):
                 if chat_type in ["group", "supergroup"]:
                     await client.send_message(
                         userid,
-                        f"Connected to **{title}** !",
+                        f"Connected to **{title}**\n\n❣️ From 𝗠𝗶𝗹𝗹𝗶𝗲",
                         parse_mode="md"
                     )
             else:
                 await message.reply_text(
-                    "Already <b>CONNECTED</b>!",
+                    "Already <b>Connected</b>!",
                     quote=True
                 )
         else:
