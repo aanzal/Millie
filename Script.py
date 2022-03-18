@@ -125,11 +125,11 @@ Group - {} (<code>{}</code>)
 Total Members - <code>{}</code>
 Added By - {}
 
-<a href='http://t.me/CGProBot'>𝗠𝗶𝗹𝗹𝗶𝗲</a>
+𝗠𝗶𝗹𝗹𝗶𝗲
 """
     LOG_TEXT_P = """#NewUser
 ID - <code>{}</code>
 Name - {}
 
-<a href='http://t.me/CGProBot'>𝗠𝗶𝗹𝗹𝗶𝗲</a>
+𝗠𝗶𝗹𝗹𝗶𝗲
 """
