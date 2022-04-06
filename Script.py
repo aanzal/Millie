@@ -20,7 +20,7 @@ That's it! <b>Bot is now Ready!</b>
 
 📝 𝐋𝐀𝐍𝐆𝐔𝐀𝐆𝐄 : <a href=https://www.python.org/>𝗣𝗬𝗧𝗛𝗢𝗡</a>
 
-📡 𝐁𝐎𝐓 𝐒𝐄𝐑𝐕𝐄𝐑 : <a href=http://heroku.com/>𝗛𝗘𝗥𝗢𝗞𝗨</a>
+📡 𝐁𝐎𝐓 𝐒𝐄𝐑𝐕𝐄𝐑 : <a href=http://google.com/>𝗜𝗡𝗧𝗘𝗥𝗡𝗘𝗧</a>
 
 📂 𝐃𝐀𝐓𝐀𝐁𝐀𝐒𝐄 : <a href=https://www.mongodb.com/>𝗠𝗢𝗡𝗚𝗢 𝗗𝗕</a>
 
